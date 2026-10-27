@@ -1,0 +1,10 @@
+# локальный конфиг с токеном бота — не коммитим
+config.js
+
+# служебные файлы ОС и редакторов
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.log

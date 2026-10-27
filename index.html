@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Маникюр на дому — запись со скидкой 50% | Мастер Анна Ковалёва</title>
+<meta name="description" content="Аккуратный маникюр и педикюр у вас дома. Стерильные инструменты, гель-лак от 1 часа. Первая запись — скидка 50%.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#b9516e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__mark">A</span>
+      <span class="logo__text">Anna<strong>Nails</strong><small>маникюр на дому</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#services">Цены</a>
+      <a href="#work">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#booking" class="btn btn--sm header__cta">Записаться −50%</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="pulse"></span> Акция: первая запись со скидкой <b>50%</b>
+      </div>
+      <h1 class="hero__title">Красивый маникюр<br><em>у вас дома</em></h1>
+      <p class="hero__lead">
+        Приезжаю с профессиональным кабинетом в чемоданчике: стерильные инструменты,
+        любимые подушки, ваше кресло и чай. Вы просто расслабляетесь.
+      </p>
+
+      <ul class="hero__facts">
+        <li><b>1,5 ч</b><span>полный сервис</span></li>
+        <li><b>7 дней</b><span>носимость покрытия</span></li>
+        <li><b>600+</b><span>довольных клиенток</span></li>
+      </ul>
+
+      <div class="hero__actions">
+        <a href="#booking" class="btn btn--primary">Записаться со скидкой 50%</a>
+        <a href="#services" class="btn btn--ghost">Смотреть цены</a>
+      </div>
+      <p class="hero__note">Бесплатный выезд в пределах 10 км от центра города</p>
+    </div>
+
+    <div class="hero__art">
+      <div class="hero__card hero__card--main">
+        <img src="img/image%20(9).jpeg" alt="Нюдовый маникюр с золотой геометрическим рисунком" width="1024" height="1024">
+      </div>
+
+      <div class="hero__discount">
+        <span>−50%</span>
+        <small>на первый визит</small>
+      </div>
+
+      <div class="hero__card hero__card--mini">
+        <div class="stars">★★★★★</div>
+        <p>«Руки как после салона, а я вообще не выходила из дома»</p>
+        <span>— Марина, клиентка 2 года</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>стерильные инструменты</span><i>✦</i><span>выезд к вам</span><i>✦</i><span>гель-лак 3 недели</span><i>✦</i><span>скидка 50%</span><i>✦</i>
+      <span>стерильные инструменты</span><i>✦</i><span>выезд к вам</span><i>✦</i><span>гель-лак 3 недели</span><i>✦</i><span>скидка 50%</span><i>✦</i>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMO BAR ===== -->
+<section class="promo">
+  <div class="container promo__inner">
+    <div class="promo__text">
+      <h2>Скидка 50% действует на первую запись</h2>
+      <p>Промокод <button class="promo__code" id="promoCode" type="button">FIRST50</button> применится автоматически при записи</p>
+    </div>
+    <div class="promo__timer" id="timer" aria-label="До конца акции">
+      <div><b id="t-days">00</b><span>дней</span></div>
+      <div><b id="t-hours">00</b><span>часов</span></div>
+      <div><b id="t-mins">00</b><span>минут</span></div>
+      <div><b id="t-secs">00</b><span>секунд</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="section benefits">
+  <div class="container">
+    <div class="grid grid--4">
+      <article class="benefit">
+        <div class="benefit__icon">🧼</div>
+        <h3>Стерильность</h3>
+        <p>Сухожар и автоклав. Каждый инструмент — в индивидуальном крафт-пакете.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit__icon">🏡</div>
+        <h3>Без дороги</h3>
+        <p>Приезжаю к вам домой или в офис. Экономьте час на поездки и ожидание.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit__icon">⏱️</div>
+        <h3>Точно в срок</h3>
+        <p>Никакого ожидания: ваше время в расписании закреплено только за вами.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit__icon">💅</div>
+        <h3>Материалы премиум</h3>
+        <p>Kodi, PNB, Nails Inc. Гипоаллергенные базы без запаха и ацетона.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section--tint" id="services">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Прайс</span>
+      <h2>Услуги и цены <em>со скидкой 50%</em></h2>
+      <p>Старая цена зачёркнута — действует только цена со скидкой по акции первой записи.</p>
+    </div>
+
+    <div class="grid grid--3 prices">
+      <article class="price">
+        <h3>Маникюр без покрытия</h3>
+        <p class="price__desc">Уход, кутикула, форма, полировка</p>
+        <div class="price__val"><s>1 400 ₽</s><b>700 ₽</b></div>
+        <ul><li>40 минут</li><li>Крем и масла включены</li></ul>
+        <a href="#booking" class="btn btn--sm btn--outline" data-service="Маникюр без покрытия">Выбрать</a>
+      </article>
+
+      <article class="price price--hit">
+        <span class="price__tag">Хит</span>
+        <h3>Маникюр + гель-лак</h3>
+        <p class="price__desc">Классический или аппаратный, любое покрытие</p>
+        <div class="price__val"><s>2 200 ₽</s><b>1 100 ₽</b></div>
+        <ul><li>1,5 часа</li><li>Носимость до 3 недель</li></ul>
+        <a href="#booking" class="btn btn--sm btn--primary" data-service="Маникюр + гель-лак">Выбрать</a>
+      </article>
+
+      <article class="price">
+        <h3>Маникюр + укрепление</h3>
+        <p class="price__desc">Гель или база-конструктор для тонких ногтей</p>
+        <div class="price__val"><s>2 800 ₽</s><b>1 400 ₽</b></div>
+        <ul><li>2 часа</li><li>Идеально для сколотых ногтей</li></ul>
+        <a href="#booking" class="btn btn--sm btn--outline" data-service="Маникюр + укрепление">Выбрать</a>
+      </article>
+
+      <article class="price">
+        <h3>Дизайн ногтей</h3>
+        <p class="price__desc">От 100 ₽ за ноготь: френч, стразы, рисунок</p>
+        <div class="price__val"><s>200 ₽</s><b>100 ₽</b></div>
+        <ul><li>5–20 минут</li><li>Любой дизайн по фото</li></ul>
+        <a href="#booking" class="btn btn--sm btn--outline" data-service="Дизайн ногтей">Выбрать</a>
+      </article>
+
+      <article class="price">
+        <h3>Педикюр комбинированный</h3>
+        <p class="price__desc">Стопы, пяточки, покрытие гель-лаком</p>
+        <div class="price__val"><s>3 000 ₽</s><b>1 500 ₽</b></div>
+        <ul><li>2 часа</li><li>Обработка вросших ногтей</li></ul>
+        <a href="#booking" class="btn btn--sm btn--outline" data-service="Педикюр комбинированный">Выбрать</a>
+      </article>
+
+      <article class="price">
+        <h3>Снятие покрытия</h3>
+        <p class="price__desc">Безопасное снятие + уход за ногтями</p>
+        <div class="price__val"><s>500 ₽</s><b>250 ₽</b></div>
+        <ul><li>20 минут</li><li>При заказе маникюра — бесплатно</li></ul>
+        <a href="#booking" class="btn btn--sm btn--outline" data-service="Снятие покрытия">Выбрать</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Портфолио</span>
+      <h2>Мои работы</h2>
+      <p>Более 600 выполненных заказов за два года — вот несколько последних.</p>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure class="gallery__item gallery__item--a">
+        <img src="img/a9f6b71d16911f1957c7ec4c1e44e70_1.jpeg" alt="Маникюр: золотой френч, изумрудный гель-глиттер и летний дизайн" loading="lazy" width="1024" height="1024">
+        <figcaption>Френч, глиттер и летний дизайн</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/a9f6b71d16911f1957c7ec4c1e44e70_2.jpeg" alt="Маникюр розового цвета с золотым хромом" loading="lazy" width="1024" height="1024">
+        <figcaption>Розовый + золотой хром</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/a9f6b71d16911f1957c7ec4c1e44e70_3.jpeg" alt="Маникюр: белый, золото и чёрный акцент" loading="lazy" width="1024" height="1024">
+        <figcaption>Белый, золото и чёрный акцент</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/a9f6b71d16911f1957c7ec4c1e44e70_4.jpeg" alt="Нюдовый маникюр с золотой пудрой" loading="lazy" width="1024" height="1024">
+        <figcaption>Нюд с золотой пудрой</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/image%20(7).jpeg" alt="Маникюр с голографическим френчем на нюдовой основе" loading="lazy" width="1024" height="1024">
+        <figcaption>Голографический френч</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/image%20(10).jpeg" alt="Серебряный хром с чёрными линиями" loading="lazy" width="1024" height="1024">
+        <figcaption>Хром с чёрной линией</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="img/image%20(11).jpeg" alt="Маникюр серебряным хромом и нюд с золотыми линиями" loading="lazy" width="1024" height="1024">
+        <figcaption>Серебро и тонкое золото</figcaption>
+      </figure>
+
+      <a href="#booking" class="gallery__item gallery__cta">
+        <span class="gallery__cta-off">−50%</span>
+        <b>Хотите такой же?</b>
+        <small>Первая запись — со скидкой 50%</small>
+        <em>Записаться →</em>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Как это работает</span>
+      <h2>Запись за 3 шага</h2>
+    </div>
+    <div class="grid grid--3 steps">
+      <div class="step"><span>01</span><h3>Выберите услугу</h3><p>Отметьте нужный сервис в прайсе — форма подставит его автоматически.</p></div>
+      <div class="step"><span>02</span><h3>Укажите дату</h3><p>Свободные слоты — ежедневно с 9:00 до 21:00, включая выходные.</p></div>
+      <div class="step"><span>03 <em>−50%</em></span><h3>Получите скидку</h3><p>Подтвержу запись в течение 15 минут и закреплю цену со скидкой.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="about">
+  <div class="container about__inner">
+    <div class="about__photo">
+      <div class="about__frame">
+        <img src="img/master_anna.jpeg" alt="Мастер маникюра Анна Ковалёва за работой" width="896" height="1152" loading="lazy">
+      </div>
+      <span class="about__years">8 лет<br>опыта</span>
+    </div>
+    <div class="about__text">
+      <span class="eyebrow">Обо мне</span>
+      <h2>Анна Ковалёва</h2>
+      <p>
+        Сертифицированный мастер-нолог. Обучалась в студии «Nail Pro», постоянно езжу на
+        воркшопы по новым техникам. Работаю на дому у клиенток с 2018 года — и знаю,
+        как сделать так, чтобы вы не тратили время на дорогу и ждали только приятного.
+      </p>
+      <div class="about__stats">
+        <div><b>600+</b><span>клиенток</span></div>
+        <div><b>5,0</b><span>рейтинг</span></div>
+        <div><b>24 ч</b><span>гарантия замены</span></div>
+      </div>
+      <ul class="checks">
+        <li>Диплом и сертификаты мастера</li>
+        <li>Одноразовые расходники для каждого клиента</li>
+        <li>Гарантия: бесплатная замена при сколе в первые 24 часа</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section section--tint" id="reviews">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят клиентки</h2>
+    </div>
+    <div class="grid grid--3">
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>Записалась вечером после работы, Анна приехала через час. Ровный френч, ноль заусенцев, кутикула идеальная.</p>
+        <footer>Марина С. <span>маникюр + гель-лак</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>Первый визит со скидкой 50% — решила попробовать и осталась на два года. Носится 3 недели без единого скола.</p>
+        <footer>Ольга В. <span>укрепление</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>Живу в спальном районе, раньше на маникюр уходил полдня. Теперь всё дома, с сериалом и чашкой кофе.</p>
+        <footer>Екатерина Л. <span>педикюр</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="section booking" id="booking">
+  <div class="container booking__inner">
+    <div class="booking__info">
+      <span class="eyebrow eyebrow--light">Запись</span>
+      <h2>Забронируйте время<br>и получите <em>−50%</em></h2>
+      <p>Заполните форму — подтвержу запись в течение 15 минут в рабочее время и закреплю скидку за вами.</p>
+
+      <ul class="booking__perks">
+        <li><b>−50%</b> на первый визит по промокоду FIRST50</li>
+        <li><b>0 ₽</b> выезд в пределах 10 км от центра</li>
+        <li><b>15 мин</b> время ответа на заявку</li>
+      </ul>
+
+      <div class="booking__contacts">
+        <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+        <span>Ежедневно 9:00 — 21:00</span>
+      </div>
+    </div>
+
+    <form class="form" id="bookingForm" novalidate>
+      <div class="form__discount">
+        <span class="form__discount-badge">−50%</span>
+        <div>
+          <b>Скидка активна</b>
+          <small>Промокод FIRST50 применён автоматически</small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Анна" autocomplete="name">
+        <small class="field__err">Пожалуйста, напишите имя</small>
+      </div>
+
+      <div class="field">
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
+        <small class="field__err">Введите корректный номер: 11 цифр</small>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="service">Услуга</label>
+          <select id="service" name="service">
+            <option value="">Выберите услугу</option>
+            <option>Маникюр без покрытия — 700 ₽</option>
+            <option selected>Маникюр + гель-лак — 1 100 ₽</option>
+            <option>Маникюр + укрепление — 1 400 ₽</option>
+            <option>Дизайн ногтей — 100 ₽</option>
+            <option>Педикюр комбинированный — 1 500 ₽</option>
+            <option>Снятие покрытия — 250 ₽</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Дата визита</label>
+          <input type="date" id="date" name="date">
+          <small class="field__err">Выберите дату</small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Удобное время</label>
+        <div class="chips" id="timeChips">
+          <button type="button" class="chip" data-time="10:00">10:00</button>
+          <button type="button" class="chip is-active" data-time="12:30">12:30</button>
+          <button type="button" class="chip" data-time="15:00">15:00</button>
+          <button type="button" class="chip" data-time="18:30">18:30</button>
+          <button type="button" class="chip" data-time="20:00">20:00</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address">Адрес или комментарий <span>(необязательно)</span></label>
+        <input type="text" id="address" name="address" placeholder="ул. Ленина, 12, кв. 5 или «позвоните заранее»">
+      </div>
+
+      <div class="form__total">
+        <div><span>Цена со скидкой</span><b id="totalPrice">1 100 ₽</b></div>
+        <div class="form__total-old"><span>Обычная цена</span><s id="oldPrice">2 200 ₽</s></div>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--block" id="submitBtn">
+        Записаться и получить −50%
+      </button>
+      <p class="form__agree">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+      <div class="form__success" id="formSuccess" hidden>
+        <span>✓</span>
+        <div>
+          <b>Заявка принята!</b>
+          <p id="successText">Перезвоню в течение 15 минут и закреплю скидку 50%.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Что нужно подготовить к вашему приезду?</summary>
+        <p>Только свободный столик или небольшой уголок. Всё остальное — кресло-подставка, лампа, коврик, средства — привожу с собой.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Как работает скидка 50%?</summary>
+        <p>Она действует на первый визит и применяется автоматически при записи через форму (промокод FIRST50). Скидка суммируется с ценой выбранной услуги из прайса.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Вы работаете в выходные и вечером?</summary>
+        <p>Да, принимаю ежедневно с 9:00 до 21:00, включая субботу и воскресенье. Последние записи — за 3 дня до даты.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Насколько безопасны инструменты?</summary>
+        <p>Стерилизую в сухожаре при 180 °C и автоклаве, храню в индивидуальных крафт-пакетах вскрытия. Расходники — одноразовые.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Можно ли отменить или перенести запись?</summary>
+        <p>Конечно. Просьба предупредить минимум за 4 часа — перенесём без потери скидки.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="cta-final">
+  <div class="container cta-final__inner">
+    <h2>Успейте записаться<br>со скидкой <em>50%</em></h2>
+    <p>Осталось <b id="slotsLeft">7</b> свободных слотов по акции в этом месяце</p>
+    <a href="#booking" class="btn btn--light">Забронировать время</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="#top" class="logo logo--light">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Anna<strong>Nails</strong><small>маникюр на дому</small></span>
+      </a>
+      <p>Мастер маникюра и педикюра с выездом к клиенту.<br>Стерильность, аккуратность, ваше время.</p>
+    </div>
+    <div>
+      <h3>Контакты</h3>
+      <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+      <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/79001234567" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div>
+      <h3>Разделы</h3>
+      <a href="#services">Цены</a>
+      <a href="#work">Работы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#booking">Запись</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 AnnaNails. Все права защищены.</span>
+    <span>ИП Ковалёва А. И., работаем по договору</span>
+  </div>
+</footer>
+
+<!-- ===== MOBILE STICKY BAR ===== -->
+<div class="sticky-bar">
+  <div class="sticky-bar__price"><s>2 200 ₽</s><b>1 100 ₽</b></div>
+  <a href="#booking" class="btn btn--primary btn--sm">Записаться −50%</a>
+</div>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" hidden>
+  <button class="lightbox__close" id="lbClose" type="button" aria-label="Закрыть">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Предыдущая работа">‹</button>
+  <figure class="lightbox__fig">
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Следующая работа">›</button>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
