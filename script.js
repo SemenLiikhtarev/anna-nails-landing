@@ -135,8 +135,20 @@
   date.min = iso(today);
   date.value = iso(new Date(today.getTime() + 86400000));
 
-  /* ---------- Отправка заявки в Telegram ---------- */
-  const cfg = window.ANNA_CONFIG || {};
+  /* ---------- Конфиг: config.js грузится динамически ----------
+     В репозитории файла нет (там токен), поэтому отсутствие
+     не должно ломать страницу и засорять консоль. */
+  let cfg = {};
+  const configReady = (async () => {
+    try {
+      const res = await fetch('config.js', { cache: 'no-store' });
+      if (!res.ok) return;
+      new Function(await res.text())();
+      cfg = window.ANNA_CONFIG || {};
+    } catch (e) {
+      /* демо-режим: заявки сохраняются только локально */
+    }
+  })();
 
   const esc = (s) =>
     String(s).replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]));
@@ -159,7 +171,9 @@
     ].filter(Boolean).join('\n');
   }
 
+  /* ---------- Отправка заявки в Telegram ---------- */
   async function sendToTelegram(b) {
+    await configReady;
     if (!cfg.TELEGRAM_BOT_TOKEN || !cfg.TELEGRAM_CHAT_ID) return false;
     try {
       const ctrl = new AbortController();
